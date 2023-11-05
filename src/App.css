@@ -1,0 +1,128 @@
+.App{
+  background: linear-gradient(#171420,#171420);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image{
+  position: absolute;
+  top: -70px;
+  left: 70px;
+  height: 120px;
+}
+.top,.down{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 25rem;
+  background-color: #302c2c;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.top h1,h4{
+  margin: 30px;
+  color: white;
+}
+.top h1{
+  font-size: 4rem;
+  margin-top: 70px;
+}
+.down{
+  background: white;
+}
+.downcont{
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.down h1{
+  font-size: 3rem;
+}
+.side{
+  width: 30rem;
+  height: 52rem;
+  position: relative;
+  background: url('https://app.pinata.cloud/f5efc22bb74864bf.png'),linear-gradient(#9044ec,#3e8cdc,#14b8dc) ;
+  border-radius: 40px;
+  margin-left: 30px;
+ 
+  /* animation: up 3s; */
+}
+.input{
+  height:2rem;
+  width: 18rem;
+  border: 0.1px rgb(47, 43, 43) solid;
+}
+.btn{
+  width: 10rem;
+  height: 3rem;
+  margin-top: 20px;
+  margin-left: 20%;
+  background-color: #6064f4;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.sideimg{ 
+  height: 80%;
+  width: auto;  
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  top: 350px;
+  animation: up 3s;
+}
+.wrapper{
+  height: 100%;
+  width: 100%;
+}
+
+.btn:hover{
+  background-color: #483ccc;
+}
+.btn:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.4;
+}
+
+@keyframes up {
+    from{ 
+      top: 900px;
+    }
+    to{
+      top: 350px;
+    }
+}
+
+@keyframes shine{
+  0%{
+    left: -100px;
+  }
+  60%{
+    left: 200px;
+  }
+  to {
+    left: 200px;
+  }
+}
